@@ -1,4 +1,4 @@
-const express = require('express');
+const express = require('express'); 
 const app = express.Router();
 const loginController=require('../controllers/loginController')
 const body_Parser = require('body-parser')
@@ -10,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/',loginController.loginPage)
 app.get('/login',loginController.loginPage)
-
 app.post('/login', loginController.login)
 
 app.get('/register', loginController.registerPage)

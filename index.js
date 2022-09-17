@@ -14,6 +14,6 @@ const appRoute = require('./routes/routes');
 
 app.use('/', appRoute)
 
-auth.initialization(app);
+// auth.initialization(app);
 
 app.listen(3000);
