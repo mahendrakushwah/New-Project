@@ -28,11 +28,17 @@ module.exports = {
         // .then( data => {
 
         // })
-        const project = await login.findOne({ where: { EMAIL: loginId } });
-        if (project === null) {
+        const result = await users.findOne({ where: { EMAIL: loginId } });
+        if (result === null) {
+            res.send('User Not found!');
             console.log('Not found!');
-        } else {
-            console.log(project.EMAIL); // 'My Title'
+        } else  {
+            if(result.PASSWORD == password){
+                console.log(result);
+                res.send("Successfully logged In")
+            }else{
+                res.send('Wrong Password')
+            }
         }
 
 
