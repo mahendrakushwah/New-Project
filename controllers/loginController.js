@@ -1,86 +1,94 @@
-// const express =  require('express')
-// const connection = require("../utils/db")ra
-
-
+const express = require('express')
 const { response } = require("express")
-const userModel = require("../models/user.model")
 const mysql = require('mysql')
 const dotenv = require('dotenv')
+const db = require('../models/index')
+const USERS = require('../models/USERS')
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '1234567890',
-    database: 'testApp'
-});
+db.sequelize.sync();
+
+const users = db.USERS;
+// connection.sequelize.sync();
+// db.sequelize.authenticate().then(function () {
+//     console.log('Nice! Database looks fine');
+// }).catch(function (err) {
+//     console.log(err, "Something went wrong with the Database Update!")
+// });
 
 module.exports = {
     loginPage: function (req, res) {
         res.render('login')
     },
-
     login: async function (req, res) {
-        // console.log(req.body);
-        
         var loginId = req.body.email
         var password = req.body.password
-        // const results = Object.values(JSON.parse(JSON.stringify(results)));
         
-        connection.query('SELECT * FROM USERS WHERE EMAIL = ?', [loginId], function (error, results, fields) {
-            
 
-            if (error) {
-                res.send("Something Went Rong..")
-            }
-            else if (results.length != 0) {
-                console.log(results);
-                var data = results[0]
-                // console.log(data.PASS);
-                // console.log(req.body.password);
-                if (results[0].PASS == req.body.password) {
-                    res.send("Successfully Logged In")
-                }
-                else {
-                    res.send("Wrong Password")
-                }
-            }
-            else {
-                res.send("Invalid User, Signup")
-            }
+        // USERS.findAll({where EMAIL =loginId})
+        // .then( data => {
 
-        })
+        // })
+        const project = await login.findOne({ where: { EMAIL: loginId } });
+        if (project === null) {
+            console.log('Not found!');
+        } else {
+            console.log(project.EMAIL); // 'My Title'
+        }
 
 
-        // if (areValid = await userModel.areValidCredentials(loginId, password)) {
-        //     res.send("I am good")
-        // } else {
-        //     res.send("No Check your code")
-        // }
+        // connection.query('SELECT * FROM USERS WHERE EMAIL = ?', [loginId], function (error, results, fields) {
+        //     if (error) {
+        //         res.send("Something Went Rong..")
+        //     }
+        //     else if (results.length != 0) {
+        //         console.log(results);
+        //         var data = results[0]
+        //         if (results[0].PASSWORD == req.body.password) {
+        //             res.send("Successfully Logged In")
+        //         }
+        //         else {
+        //             res.send("Wrong Password")
+        //         }
+        //     }
+        //     else {
+        //         res.send("Invalid User, Signup")
+        //     }
+        // })
     },
 
     registerPage: function (req, res) {
         res.render('register')
     },
-
     register: async function (req, res) {
-        // console.log(req.body)
 
-        var firstName = req.body.fname
-        var lastName = req.body.lname
-        var loginId = req.body.email
-        var password = req.body.password
+        var data = {
+            FIRST_NAME: req.body.fname,
+            LAST_NAME: req.body.lname,
+            EMAIL: req.body.email,
+            PASSWORD: req.body.password
+        }
+        users.create(data)
+            .then(data => {
+                return res.send("Created");
+            })
+            .catch(err => {
+                return res.status(500).send({
+                    message: err.message || "Some error occurred while creating the Tutorial."
+                });
+            });
+
+        }
         
-        // console.log(connection)
-
-        connection.query('insert into USERS(FIRST_NAME, LAST_NAME, EMAIL, PASS) values(?,?,?,?)', [firstName, lastName, loginId, password], function (error, results, fields) {
-            if (error) {
-                console.log(error);
-            }
-            else {
-                // console.log(results);
-                res.send("Created Successfully")
-                // res.render('login')
-            }
-        });
     }
-}
+    
+    
+    
+            // connection.query('insert into USERS(FIRST_NAME, LAST_NAME, EMAIL, PASSWORD) values(?,?,?,?)', [firstName, lastName, loginId, password], function (error, results, fields) {
+            //     if (error) {
+            //         console.log(error);
+            //     }
+            //     else {
+            //         res.send("Created Successfully")
+    
+            //     }
+            // });

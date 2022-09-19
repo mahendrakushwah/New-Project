@@ -2,7 +2,7 @@ const express = require('express');
 const app = express.Router();
 const loginController=require('../controllers/loginController')
 const body_Parser = require('body-parser')
-const auth=require("../utils/auth")
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
