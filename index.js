@@ -1,12 +1,15 @@
 const express = require('express');
 const path = require('path')
 const ejs = require('ejs');
-const app = express()
 const cors = require('cors')
-// const db = require('./config/db-config')
 const dotenv = require('dotenv').config()
-const appRoute = require('./routes/routes');
+const appRoute = require('./routes');
+const cookieParser = require('cookie-parser');
+const flash = require('connect-flash');
 
+const app = express()
+
+app.use(flash());
 
 app.use(cors())
 app.set('view engine', 'ejs')

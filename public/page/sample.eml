@@ -1,0 +1,1527 @@
+Delivered-To: anisha.yadav@xemailverify.com
+Received: by 2002:a9d:20e4:0:0:0:0:0 with SMTP id x91csp366759ota;
+        Fri, 8 Apr 2022 06:16:13 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwSJ8ATd5BIc+KMBcAO0RTBv1Xf/XndOjbbcElI6DMv8WL/UEkmeu/2w8+XuxieufDJ0yUF
+X-Received: by 2002:a05:6214:3001:b0:443:bb87:7f9a with SMTP id ke1-20020a056214300100b00443bb877f9amr15637081qvb.13.1649423772336;
+        Fri, 08 Apr 2022 06:16:12 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1649423772; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OTXHkUJmxyYCB+zTf7ElzWgYOcxKZnOD6bpsi6XyDUdp2oNKpPYW5cAbpzg0ZRqldz
+         Oa3wImkvLdAhM3T7PtRhoGwvXQf3oQQ+y3umVKduR0ga8DIdT7ZB4Cz4Q5R4OB7egHU0
+         gth7JQzHBel37ZOfS8+3FeIODOJ4uohUyuQL6gzfqzVgGMcubRL3GhMhPAxH02W7PYo1
+         La/pYBMut/TGMfWEnLmmh1Y1b+FmaLTqQnojMEg3BEeYi/+9eEirGtxEWwBAmnBePZg0
+         nEZc2Shc5QCjwGGXgDtUR2CZvT98gwd27pqTdICfJy3AtPFLQpCVN+6f0a09JhSKb60I
+         7DYg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:message-id:list-unsubscribe:date:subject:from:mime-version
+         :dkim-signature;
+        bh=mHjACSmdx1iNBbnLD9YUbqMHOQ3Ksa9GWPCRYcxHlOM=;
+        b=LYg5z8D7x8DdgShPerYz7js9w4eh+z/JVl7bFQ39jJ6JYn22wW7Z7iZhmTu7lPt1si
+         kgGMw1lTI7RJzKIzVbl2p9MzWP5zgmXM0DFfek6YeMfn3p0b89/O9hh+LjYZK7V8wPnw
+         rBYXzuiign5fYzhh4pPLaTSNulJCp3FM4vI7c3BdgEmkdnENlZbfgYdkSoTNozD2wzHZ
+         jJODil4S9pyjdEOOT/VJz3ijHdCaE7+f4in91nfjlT37+VpGTOys7G+I/KSS3NmlVx9j
+         TgjbpNn0JnI/vCMmpJdGDFQtMPzDGX7fnlBm7FktOp/BITYK3zeInAlT+fmLr74yVEKL
+         sNRw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@appsumo.com header.s=s1 header.b=nc6HZp5q;
+       spf=pass (google.com: domain of bounces+5631833-a6c8-anisha.yadav=xemailverify.com@send.appsumo.com designates 168.245.124.25 as permitted sender) smtp.mailfrom="bounces+5631833-a6c8-anisha.yadav=xemailverify.com@send.appsumo.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=appsumo.com
+Return-Path: <bounces+5631833-a6c8-anisha.yadav=xemailverify.com@send.appsumo.com>
+Received: from o203.send.appsumo.com (o203.send.appsumo.com. [168.245.124.25])
+        by mx.google.com with ESMTPS id n19-20020ac85a13000000b002ed0cd358fasi357631qta.102.2022.04.08.06.16.11
+        for <anisha.yadav@xemailverify.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 08 Apr 2022 06:16:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+5631833-a6c8-anisha.yadav=xemailverify.com@send.appsumo.com designates 168.245.124.25 as permitted sender) client-ip=168.245.124.25;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@appsumo.com header.s=s1 header.b=nc6HZp5q;
+       spf=pass (google.com: domain of bounces+5631833-a6c8-anisha.yadav=xemailverify.com@send.appsumo.com designates 168.245.124.25 as permitted sender) smtp.mailfrom="bounces+5631833-a6c8-anisha.yadav=xemailverify.com@send.appsumo.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=appsumo.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=appsumo.com;
+	h=content-type:mime-version:from:subject:list-unsubscribe:to;
+	s=s1; bh=mHjACSmdx1iNBbnLD9YUbqMHOQ3Ksa9GWPCRYcxHlOM=;
+	b=nc6HZp5qVPzGGH+myWCCKHqR8cnF1bniquXFnhV94FuqqPvUJ0SbgWrWOmiMMt7rFdqC
+	B8lOLqbyQtdqIzvSg2BFnkEP7UjtJOaIwCkEwlSMRFb8nYLdOl+i5Q3TxnuNs+Jh4M0tYq
+	1jQBeCvS6ZbRpSGZJ9KIVRP3ZJ3ucDIVPXuS1p14+pHSOEBRogilSo+sIg3FhoSfjowDmh
+	qy+nUrpZ7GwBKudUNG5envUatc8Cn4uzSqTL0gHL2hWLHKtBEfxFBe908jn3xTOmw9SMJu
+	Vs7gipEP1EzfMgQ8TnypGwpaLAWo2v45u3FETJwG4MLErTZLEZOexlMzui4ETvtg==
+Received: by filterdrecv-5d896bfccd-4mq49 with SMTP id filterdrecv-5d896bfccd-4mq49-1-6250359A-3D
+        2022-04-08 13:16:10.34486349 +0000 UTC m=+142043.754913834
+Received: from ip-172-31-58-160.ec2.internal (unknown)
+	by geopod-ismtpd-2-1 (SG) with ESMTP id kOadqqXRTY-V5hTr3jrjZg
+	for <anisha.yadav@xemailverify.com>;
+	Fri, 08 Apr 2022 13:16:10.306 +0000 (UTC)
+Received: from qw-flow-email-0ea6838008bfb33a2.servers.clovesoftware.com (unknown [20.0.32.64])
+	by ip-172-31-58-160.ec2.internal (Postfix) with ESMTP id 4KZdzt23NJzNkHt
+	for <anisha.yadav@xemailverify.com>; Fri,  8 Apr 2022 13:16:10 +0000 (UTC)
+Content-Type: multipart/alternative; boundary="===============5434828950391679713=="
+MIME-Version: 1.0
+From: AppSumo <support@appsumo.com>
+Subject: Get more, save more. =?UTF-8?B?SXTigJlz?= a win-win
+Date: Fri, 08 Apr 2022 13:16:10 +0000 (UTC)
+List-Unsubscribe: <http://appsumo.myklpages.com/p/appsumo_unsub_feb2020?a=Ktp4ZG&c=01FZT18C9Q2WKBQYK7P5V5KT2R&k=d2e85970d9ff4085d1e85acee0e089f2&g=LipnxX&m=Ydm3LE&r=5TaxBQA>
+X-Kmail-Flow: KT9Bf3
+X-Kmail-Ops: 01FZT18C9Q2WKBQYK7P5V5KT2R
+X-Kmail-Message: Ydm3LE
+X-Kmail-Account: Ktp4ZG
+X-Kmail-Relay: [321855.krelaymail.com]:587
+Message-ID: <kOadqqXRTY-V5hTr3jrjZg@geopod-ismtpd-2-1>
+X-SG-EID: 
+ =?us-ascii?Q?HyZkkbIo6YMe2IjKF5FNwLXqiKfW6Kt1dSz=2FSM=2F+UJTLovFniIGJumqe1Q3Ar1?=
+ =?us-ascii?Q?ZeOc9zBHnfSiBODUqQOuG7CIjz2Bu+aeL2NWWEc?=
+ =?us-ascii?Q?0VeAmkfV=2FxAmuTjSkD5C+U2=2FwCq=2FexKeUoyY=2FQr?=
+ =?us-ascii?Q?cFDD6rwVTxUKiZA3+wiFK32gD6S6HqKxIn9RuN6?=
+ =?us-ascii?Q?j2KM82PxKJVuM=2F=2FP1hsF2h4bbJwbcX9RXROacss?=
+ =?us-ascii?Q?UOQrSkH=2F5zLmTp7llkZYUTgKGw2VpIkuEEHVC8?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb3WdckyvbC2eFaxvdDHn8D1nndBBW0fUClUlZF2fTQ?=
+ =?us-ascii?Q?6Kc4vPFDEGzZXFc2bA4Sa66cSxim9Brzu+3ypjW?=
+ =?us-ascii?Q?jsrbeGOufCci2pVXy7L=2FjZz+96dSHUIl=2FZCwGjH?=
+ =?us-ascii?Q?L2OfHBXHxKXWMJHpCtekSawmARwAcfVINxhXEj6?=
+ =?us-ascii?Q?+QHnLJ3m5ZCYJ?=
+To: "anisha.yadav@xemailverify.com" <anisha.yadav@xemailverify.com>
+X-Entity-ID: 23enNe4WnrgAaymHuRRFKA==
+
+--===============5434828950391679713==
+Content-Type: text/plain; charset=utf-8
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+[Join AppSumo Plus! ](https://appsumo.com/plus/)
+
+Hey, there!
+
+We think it's time to take this relationship to the next level. Meet [AppSu=
+mo Plus](https://appsumo.com/plus/), our premium rewards membership program=
+.
+
+It=E2=80=99s simple, really: we named our membership program AppSumo Plus b=
+ecause joining means getting more of, well, everything.
+
+Plus members get more discounts, more exclusives, and more community!
+
+[Become a member](https://appsumo.com/plus/)
+
+Member-only perks
+
+https://appsumo.com/plus/
+
+10% off (all the time)*
+
+A Plus membership gets you 10% off all AppSumo purchases. The discount is a=
+utomatically applied to your cart and there=E2=80=99s no purchase limit. Ye=
+p, it=E2=80=99s that simple.
+
+https://appsumo.com/plus/
+
+Find your people
+
+As a Plus member, you can join The Sauce, our private community for tech-sa=
+vvy entrepreneurs where you can talk shop with other Sumo-lings and AppSumo=
+ team members, gain free access to masterclasses, and more.
+
+https://appsumo.com/plus/
+
+More time to buy
+
+With Extended Access, Plus members enjoy 72 extra hours to decide if tools =
+are right for them. Members also gain access to Last Call=E2=80=94a special=
+ Plus party that provides a second chance to buy or upgrade some of our mos=
+t popular tools.
+
+https://appsumo.com/plus/
+
+Enjoy exclusive deals
+
+Throughout the year, we negotiate exclusive offers that are only available =
+to Plus members. To see what deals Plus members have access to, visit our [=
+Plus exclusives collection](https://appsumo.com/collections/plus-exclusives=
+).
+
+This just in
+
+Plus members can now access the Originals Business Growth Pack for FREE.
+
+https://appsumo.com/plus/
+
+Get the foundational tools to start and scale a seven-figure business with =
+our AppSumo Originals products. You'll have full access to KingSumo, plus T=
+ier 1 access to SendFox, EmailBadge, ShortySMS, and SleekBio for as long as=
+ you're a member.
+
+[Join now](https://appsumo.com/plus/)
+
+Just $99/year - Cancel anytime
+
+What members have to say
+
+https://appsumo.com/plus/
+
+[YouTube](https://www.youtube.com/appsumo?sub_confirmation=3D1)
+[Instagram](http://www.instagram.com/appsumo)
+[Linkedin](https://www.linkedin.com/company/appsumo)
+[Facebook](http://www.facebook.com/appsumo)
+[Twitter](http://www.twitter.com/appsumo)
+
+[View in Your Browser](https://manage.kmail-lists.com/subscriptions/web-vie=
+w?a=3DKtp4ZG&c=3D01FZT18C9Q2WKBQYK7P5V5KT2R&k=3Dd2e85970d9ff4085d1e85acee0e=
+089f2&g=3DLipnxX&m=3DYdm3LE&r=3D5TaxBQA)
+
+Want to re-evaluate this relationship? [Manage Preferences](http://appsumo.=
+myklpages.com/p/preferences_feb2020?a=3DKtp4ZG&c=3D01FZT18C9Q2WKBQYK7P5V5KT=
+2R&k=3Dd2e85970d9ff4085d1e85acee0e089f2&g=3DLipnxX&m=3DYdm3LE&r=3D5TaxBQA) =
+or [Unsubscribe](http://appsumo.myklpages.com/p/appsumo_unsub_feb2020?a=3DK=
+tp4ZG&c=3D01FZT18C9Q2WKBQYK7P5V5KT2R&k=3Dd2e85970d9ff4085d1e85acee0e089f2&g=
+=3DLipnxX&m=3DYdm3LE&r=3D5TaxBQA).
+AppSumo 1305 E 6th St #3 Austin, Texas 78702
+
+=E2=80=8C
+--===============5434828950391679713==
+Content-Type: text/html; charset=utf-8
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"=
+>
+<title></title>
+<style type=3D"text/css">@media only screen and (max-width:480px){body,tabl=
+e,td,p,a,li,blockquote{-webkit-text-size-adjust:none !important}body{width:=
+100% !important;min-width:100% !important}#bodyCell{padding:0 !important}ta=
+ble.kmMobileHide{display:none !important}table.kmDesktopOnly,td.kmDesktopOn=
+ly,th.kmDesktopOnly,tr.kmDesktopOnly,td.kmDesktopWrapHeaderMobileNone{displ=
+ay:none !important}table.kmMobileOnly{display:table !important}tr.kmMobileO=
+nly{display:table-row !important}td.kmMobileOnly,td.kmDesktopWrapHeader,th.=
+kmMobileOnly{display:table-cell !important}tr.kmMobileNoAlign,table.kmMobil=
+eNoAlign{float:none !important;text-align:initial !important;vertical-align=
+:middle !important;table-layout:fixed !important}tr.kmMobileCenterAlign{flo=
+at:none !important;text-align:center !important;vertical-align:middle !impo=
+rtant;table-layout:fixed !important}td.kmButtonCollection{padding-left:9px =
+!important;padding-right:9px !important;padding-top:9px !important;padding-=
+bottom:9px !important}td.kmMobileHeaderStackDesktopNone,img.kmMobileHeaderS=
+tackDesktopNone,td.kmMobileHeaderStack{display:block !important;margin-left=
+:auto !important;margin-right:auto !important;padding-bottom:9px !important=
+;padding-right:0 !important;padding-left:0 !important}td.kmMobileWrapHeader=
+,td.kmMobileWrapHeaderDesktopNone{display:inline-block !important}td.kmMobi=
+leHeaderSpacing{padding-right:10px !important}td.kmMobileHeaderNoSpacing{pa=
+dding-right:0 !important}table.kmDesktopAutoWidth{width:inherit !important}=
+table.kmMobileAutoWidth{width:100% !important}table.kmTextContentContainer{=
+width:100% !important}table.kmBoxedTextContentContainer{width:100% !importa=
+nt}td.kmImageContent{padding-left:0 !important;padding-right:0 !important}i=
+mg.kmImage{width:100% !important}td.kmMobileStretch{padding-left:0 !importa=
+nt;padding-right:0 !important}table.kmSplitContentLeftContentContainer,tabl=
+e.kmSplitContentRightContentContainer,table.kmColumnContainer,td.kmVertical=
+ButtonBarContentOuter table.kmButtonBarContent,td.kmVerticalButtonCollectio=
+nContentOuter table.kmButtonCollectionContent,table.kmVerticalButton,table.=
+kmVerticalButtonContent{width:100% !important}td.kmButtonCollectionInner{pa=
+dding-left:9px !important;padding-right:9px !important;padding-top:9px !imp=
+ortant;padding-bottom:9px !important}td.kmVerticalButtonIconContent,td.kmVe=
+rticalButtonTextContent,td.kmVerticalButtonContentOuter{padding-left:0 !imp=
+ortant;padding-right:0 !important;padding-bottom:9px !important}table.kmSpl=
+itContentLeftContentContainer td.kmTextContent,table.kmSplitContentRightCon=
+tentContainer td.kmTextContent,table.kmColumnContainer td.kmTextContent,tab=
+le.kmSplitContentLeftContentContainer td.kmImageContent,table.kmSplitConten=
+tRightContentContainer td.kmImageContent{padding-top:9px !important}td.rowC=
+ontainer.kmFloatLeft,td.rowContainer.kmFloatLeft,td.rowContainer.kmFloatLef=
+t.firstColumn,td.rowContainer.kmFloatLeft.firstColumn,td.rowContainer.kmFlo=
+atLeft.lastColumn,td.rowContainer.kmFloatLeft.lastColumn{float:left;clear:b=
+oth;width:100% !important}table.templateContainer,table.templateContainer.b=
+randingContainer,div.templateContainer,div.templateContainer.brandingContai=
+ner,table.templateRow{max-width:600px !important;width:100% !important}h1{f=
+ont-size:32px !important;line-height:1.5 !important}h2{font-size:28px !impo=
+rtant;line-height:1.5 !important}h3{font-size:24px !important;line-height:1=
+.5 !important}h4{font-size:20px !important;line-height:1.5 !important}td.km=
+TextContent{font-size:16px !important;line-height:1.5 !important}td.kmTextB=
+lockInner td.kmTextContent{padding-right:18px !important;padding-left:18px =
+!important}table.kmTableBlock.kmTableMobile td.kmTableBlockInner{padding-le=
+ft:9px !important;padding-right:9px !important}table.kmTableBlock.kmTableMo=
+bile td.kmTableBlockInner .kmTextContent{font-size:16px !important;line-hei=
+ght:1.5 !important;padding-left:4px !important;padding-right:4px !important=
+}}</style>
+<!--[if mso]>
+    <style>
+     =20
+      .templateContainer {
+        border: 0px none #AAAAAA;
+        background-color: #FFFFFF;
+       =20
+          border-radius: 0px;
+       =20
+      }
+      #brandingContainer {
+        background-color: transparent !important;
+        border: 0;
+      }
+     =20
+     =20
+      .templateContainerInner {
+        padding: 0px;
+      }
+     =20
+    </style>
+  <![endif]-->
+<style>span.yshortcuts:hover {background-color:none !important;border:none =
+!important}
+span.yshortcuts:active {background-color:none !important;border:none !impor=
+tant}
+span.yshortcuts:focus {background-color:none !important;border:none !import=
+ant}
+.rowContainer .kmTextContent a:link {color:#0044C0;font-weight:bold;text-de=
+coration:none}
+.rowContainer .kmTextContent a:visited {color:#0044C0;font-weight:bold;text=
+-decoration:none}
+.kmTable .kmTableRow:last-child > td {border-bottom:none !important}</style=
+><style>@import url(https://fonts.googleapis.com/css2?family=3DBarlow:wght@=
+600&display=3Dswap);
+@import url(https://fonts.googleapis.com/css2?family=3DRoboto&display=3Dswa=
+p);
+#outlook a {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0
+    }
+.ReadMsgBody {
+    width: 100%
+    }
+.ExternalClass {
+    width: 100%
+    }
+span.yshortcuts {
+    background-color: none !important;
+    border: none !important
+    }
+body {
+    margin: 0;
+    padding: 0
+    }
+a {
+    word-wrap: break-word !important;
+    max-width: 100%
+    }
+img {
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    max-width: 100%
+    }
+img[align=3D"left"] {
+    margin-right: 0
+    }
+img[align=3D"right"] {
+    margin-left: 0
+    }
+table, td {
+    border-collapse: collapse;
+    mso-table-lspace: 0;
+    mso-table-rspace: 0;
+    table-layout: fixed
+    }
+p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 1em
+    }
+#bodyTable, #bodyCell {
+    height: 100% !important;
+    margin: 0;
+    width: 100% !important;
+    table-layout: auto
+    }
+#bodyTable {
+    padding: 0
+    }
+#bodyCell {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-top: 0
+    }
+body, #bodyTable {
+    background-color: #F5F5F9
+    }
+.templateContainer {
+    border: 0 none #AAA;
+    background-color: #FFF;
+    border-radius: 0
+    }
+.brandingContainer {
+    background-color: transparent;
+    border: 0
+    }
+.templateContainerInner {
+    padding: 0
+    }
+h1 {
+    color: #1B1B1B !important;
+    display: block;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left
+    }
+h2 {
+    color: #1B1B1B !important;
+    display: block;
+    font-family: "Lucida Sans", Lucida;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: normal;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left
+    }
+h3 {
+    color: #1B1B1B !important;
+    display: block;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: normal;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: left
+    }
+h4 {
+    color: #1B1B1B !important;
+    display: block;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: italic;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 9px;
+    text-align: left
+    }
+.rowContainer .kmTextContent {
+    color: #1B1B1B;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-align: left;
+    max-width: 100%;
+    word-wrap: break-word
+    }
+.rowContainer .kmTextContent .kmParagraph {
+    padding-bottom: 9px
+    }
+.kmImageContent {
+    padding: 0;
+    font-size: 0
+    }
+.kmImage {
+    padding-bottom: 0;
+    display: inline !important;
+    vertical-align: top;
+    border: 0;
+    height: auto;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    width: 100%
+    }
+.kmButtonBlockInner, .kmButtonCollectionInner {
+    min-width: 60px;
+    padding: 9px 18px
+    }
+.kmButtonContentContainer {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #999;
+    border-collapse: separate
+    }
+.kmButtonContent {
+    color: white;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 16px
+    }
+.kmButton {
+    font-weight: bold;
+    line-height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Helvetica Neue", Arial;
+    font-size: 16px
+    }
+.kmButtonBarContent, .kmButtonCollectionContent {
+    font-family: "Helvetica Neue", Arial
+    }
+.kmVerticalButtonContent {
+    border-collapse: separate
+    }
+.kmMobileOnly {
+    display: none
+    }
+.kmDesktopWrapHeader, .kmDesktopWrapHeaderMobileNone {
+    display: inline-block
+    }
+.kmHide {
+    display: none
+    }
+.kmMobileHeaderStackDesktopNone, .kmMobileWrapHeaderDesktopNone {
+    display: none
+    }
+.kmDesktopAutoWidth {
+    width: 100%
+    }
+h1, h2, h3, h4, .kmButton, th {
+    font-family: "Barlow", sans-serif
+    }
+p, ol, li, ul {
+    font-family: "Roboto", sans-serif
+    }</style></head>
+<body><img src=3D"http://trk.klclick3.com/ss/o/E56dajfh1qt7UV6t-VOVrQ/3l1/m=
+Yn0B49bTE2bLn4_oI3SeA/ho.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0=
+" style=3D"height:1px !important;width:1px !important;border-width:0 !impor=
+tant;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !imp=
+ortant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !=
+important;padding-right:0 !important;padding-left:0 !important;"/>
+
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">AppSumo Plus gives you access to exclusive deals, bigge=
+r benefits, and 10% off all purchases</div>
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C</div>
+<center>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" da=
+ta-upload-file-url=3D"/ajax/email-editor/file/upload" data-upload-files-url=
+=3D"/ajax/email-editor/files/upload" id=3D"bodyTable" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" id=3D"bodyCell" valign=3D"top">
+<!--[if !mso]><!-->
+<div class=3D"templateContainer" style=3D"display: table; width:600px">
+<div class=3D"templateContainerInner">
+<!--<![endif]-->
+<!--[if mso]>
+              <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"templateContainer"  width=3D"600" style=3D"border-collapse:collapse;mso=
+-table-lspace:0;mso-table-rspace:0;">
+              <tbody>
+                <tr>
+                  <td class=3D"templateContainerInner" style=3D"border-coll=
+apse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+            <![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+<tbody><tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"templateRo=
+w" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"rowContainer kmFloatLeft" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"padding-top:1px;padding-bottom:1px;=
+background-color:#F5F5F9;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-bottom:0px;padding-right:75px;=
+padding-left:50px;padding-top:0px;line-height:1.5;font-family:&quot;Helveti=
+ca Neue&quot;, Arial;" valign=3D"top">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" style=3D"min-width:100%" width=3D"100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"padding:0px;padding-right:0px;padd=
+ing-left:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" style=3D"min-width:100%" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" style=3D"padding:0;text-align: center;" valign=
+=3D"top">
+<a target=3D"_self" href=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7=
+laeSkDLu1xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zS=
+BhznpA6AzRZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY=
+7cQOGro3w6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI=
+6a6cSuxDcbtRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h0/UnpjSOQdZ=
+pNQiwbCAR-g5FGfIGhJ7XnP3oPNk9KnvD8">
+<img align=3D"center" alt=3D"Join AppSumo Plus! " class=3D"kmImage" src=3D"=
+https://d3k81ch9hvuctc.cloudfront.net/company/Ktp4ZG/images/6ff0014b-1ed6-4=
+9d1-9e17-33b0a6a98a0e.png" style=3D"max-width:1200px;padding:0;border-width=
+:0;" width=3D"600">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"padding-top:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-top:25px;padding-bottom:10px;p=
+adding-left:50px;padding-right:50px;" valign=3D"top">
+<h3>Hey, there!</h3>
+<p>We think it's time to take this relationship to the next level. Meet <a =
+style=3D"color:#0044C0; font-weight:bold; text-decoration:none" href=3D"htt=
+p://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1xwpytR4yaWcMbrzzguShGL=
+jQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zSBhznpA6AzRZ50uFX1B1SWB7fu4buZ5r=
+auOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w6Uzt4xwdr9-_mwoV5AnktL=
+gbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDcbtRe_B3n_RQdA0fei22TIN=
+V_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h1/WIiPpTDDxbVToL2ZMs2xAkPEjIOy-x-CWV5oGR2D=
+4UY"><strong>AppSumo Plus</strong></a>, our premium rewards membership prog=
+ram.</p>
+<p>It=E2=80=99s simple, really: we named our membership program AppSumo Plu=
+s because joining means getting more of, well, everything.</p>
+<p style=3D"padding-bottom:0">Plus members get more discounts, more exclusi=
+ves, and more community!</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmButtonBl=
+ock" style=3D"width: 100% !important" width=3D"100%">
+<tbody class=3D"kmButtonBlockOuter">
+<tr>
+<td align=3D"center" class=3D"kmButtonBlockInner kmMobileStretch" style=3D"=
+padding-top:25px;padding-bottom:25px;padding-left:50px;padding-right:50px;"=
+ valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmButtonCo=
+ntentContainer" style=3D"background-color:#FFBC00;border-radius:50px;" widt=
+h=3D"">
+<tbody>
+<tr>
+<!--[if !mso]><!-->
+<td align=3D"center" class=3D"kmButtonContent" style=3D"font-size:18px;colo=
+r:#1B1B1B;letter-spacing:0px;font-weight:bold;font-family:&quot;Helvetica N=
+eue&quot;, Arial;" valign=3D"middle">
+<a class=3D"kmButton" style=3D"text-decoration:none; display: inline-block;=
+ padding-top:20px;padding-bottom:20px;font-size:18px;color:#1B1B1B;letter-s=
+pacing:0px;font-weight:bold;padding-left:40px;padding-right:40px;font-famil=
+y:&quot;Helvetica Neue&quot;, Arial; ;" target=3D"_self" title=3D"" href=3D=
+"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1xwpytR4yaWcMbrzzgu=
+ShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zSBhznpA6AzRZ50uFX1B1SWB7fu4b=
+uZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w6Uzt4xwdr9-_mwoV5A=
+nktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDcbtRe_B3n_RQdA0fei2=
+2TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h2/lSm7FOaxjCMubhyfra4UjelXxEwl2DbwxSAj=
+gjNgYYA">Become a member</a>
+</td>
+<!--<![endif]-->
+<!--[if mso]>
+<td align=3D"center" valign=3D"middle" class=3D"kmButtonContent"
+  style=3D"padding:15px; padding-top:20px;padding-bottom:20px;font-size:18p=
+x;color:#1B1B1B;letter-spacing:0px;font-weight:bold;padding-left:40px;paddi=
+ng-right:40px;font-family:&quot;Helvetica Neue&quot;, Arial;">
+  <a class=3D"kmButton" title=3D"" target=3D"_self" style=3D"text-decoratio=
+n:none;padding-top:20px;padding-bottom:20px;font-size:18px;color:#1B1B1B;le=
+tter-spacing:0px;font-weight:bold;padding-left:40px;padding-right:40px;font=
+-family:&quot;Helvetica Neue&quot;, Arial;; margin-top:-20px;margin-bottom:=
+-20px;margin-left:-40px;margin-right:-40px;" href=3D"http://trk.klclick3.co=
+m/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJye=
+JV36ET3_tp0EKrIdus0qSL3zSBhznpA6AzRZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4x=
+f4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3=
+DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDcbtRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE=
+2bLn4_oI3SeA/h3/pUSVabRi9UIl5pbTkcLERrOC754leOX7bWJNOEDi2cQ">Become a membe=
+r</a>
+</td>
+<![endif]-->
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-top:35px;padding-bottom:0px;pa=
+dding-left:50px;padding-right:50px;" valign=3D"top">
+<h3 style=3D"text-align: center;">Member-only perks</h3>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" style=3D"min-width:100%" width=3D"100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"padding:9px;padding-left:9;padding=
+-right:9;padding-top:15px;padding-bottom:15px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" style=3D"min-width:100%" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/Ktp4ZG/images/e58ebd97-1346-462f-97bc-d651b1e5c6=
+af.png" style=3D"max-width:120px;padding:0;border-width:0;" width=3D"120">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTableBlo=
+ck kmTableMobile" width=3D"100%">
+<tbody class=3D"kmTableBlockOuter">
+<tr>
+<td class=3D"kmTableBlockInner" style=3D"padding-top:20px;padding-bottom:20=
+px;padding-left:50px;padding-right:50px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTable" style=3D"" width=3D"100%">
+<thead>
+<tr>
+<th class=3D"kmTextContent" style=3D"text-align:left;width:25%;padding-top:=
+4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;=
+" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:left;padding-top:4px;font-w=
+eight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;" valign=
+=3D"top">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"kmTableRow">
+<td class=3D"kmTextContent" style=3D"text-align:left;width:25%;border-top-s=
+tyle:solid;padding-bottom:4px;padding-right:10px;padding-left:0px;padding-t=
+op:4px;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;" valign=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1=
+xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zSBhznpA6Az=
+RZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w=
+6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDc=
+btRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h4/4im_k2_X6Z9iq2OXHX=
+EMNho19CdWjBj47OQYh0Rz8GQ">
+<img align=3D"left" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvuct=
+c.cloudfront.net/company/Ktp4ZG/images/7549a55c-bf64-4b15-800a-0716792f9b1a=
+.png" style=3D"max-width:86px;" width=3D"86">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"border-right:none; text-align:left; bo=
+rder-top-style:solid; padding-bottom:4px; padding-right:10px; padding-left:=
+0; padding-top:4px; border-top-width:0" valign=3D"top">
+<h4 style=3D"margin-left: 10px !important;"><b>10% off (all the time)*</b><=
+/h4>
+<p style=3D"padding-bottom:0; margin-left:10px; margin-top:0; font-size:16p=
+x">A Plus membership gets you <strong>10% off all AppSumo purchases</strong=
+>. The discount is automatically applied to your cart and there=E2=80=99s n=
+o purchase limit. Yep, it=E2=80=99s that simple.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTableBlo=
+ck kmTableMobile" width=3D"100%">
+<tbody class=3D"kmTableBlockOuter">
+<tr>
+<td class=3D"kmTableBlockInner" style=3D"padding-top:10px;padding-bottom:20=
+px;padding-left:50px;padding-right:50px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTable" style=3D"" width=3D"100%">
+<thead>
+<tr>
+<th class=3D"kmTextContent" style=3D"text-align:left;width:25%;padding-top:=
+4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;=
+" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:left;padding-top:4px;font-w=
+eight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;" valign=
+=3D"top">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"kmTableRow">
+<td class=3D"kmTextContent" style=3D"text-align:left;width:25%;border-top-s=
+tyle:solid;padding-bottom:4px;padding-right:10px;padding-left:0px;padding-t=
+op:4px;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;" valign=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1=
+xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zSBhznpA6Az=
+RZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w=
+6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDc=
+btRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h5/a-cryMgoxj78id9RHS=
+kdQkWRTejv_hT0El936fOv4D8">
+<img align=3D"left" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvuct=
+c.cloudfront.net/company/Ktp4ZG/images/388bb699-67fa-4471-ae5f-15a8df97b120=
+.png" style=3D"max-width:86px;" width=3D"86">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"border-right:none; text-align:left; bo=
+rder-top-style:solid; padding-bottom:4px; padding-right:10px; padding-left:=
+0; padding-top:4px; border-top-width:0" valign=3D"top">
+<h4 style=3D"margin-left: 10px !important;"><b></b><strong>Find your people=
+</strong></h4>
+<p style=3D"padding-bottom:0; margin-left:10px; margin-top:0; font-size:16p=
+x">As a Plus member, you can join <em><strong>The Sauce</strong></em>, our =
+private community for tech-savvy entrepreneurs where you can talk shop with=
+ other Sumo-lings and AppSumo team members, gain free access to masterclass=
+es, and more.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTableBlo=
+ck kmTableMobile" width=3D"100%">
+<tbody class=3D"kmTableBlockOuter">
+<tr>
+<td class=3D"kmTableBlockInner" style=3D"padding-top:10px;padding-bottom:20=
+px;padding-left:50px;padding-right:50px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTable" style=3D"" width=3D"100%">
+<thead>
+<tr>
+<th class=3D"kmTextContent" style=3D"text-align:left;width:25%;padding-top:=
+4px;font-weight:bold;padding-right:0px;padding-left:0px;padding-bottom:4px;=
+" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:left;padding-top:4px;font-w=
+eight:bold;padding-right:0px;padding-left:0px;padding-bottom:4px;" valign=
+=3D"top">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"kmTableRow">
+<td class=3D"kmTextContent" style=3D"text-align:left;width:25%;border-top-s=
+tyle:solid;padding-bottom:4px;padding-right:10px;padding-left:0px;padding-t=
+op:4px;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;" valign=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1=
+xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zSBhznpA6Az=
+RZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w=
+6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDc=
+btRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h6/oK-zIA6BI55_TrAdpS=
+TM46yRGccawmiKvM6reK-QyVY">
+<img align=3D"left" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvuct=
+c.cloudfront.net/company/Ktp4ZG/images/1ab06c29-a4c0-4e62-9e90-1512e42ac8cb=
+.png" style=3D"max-width:86px;" width=3D"86">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"border-right:none; text-align:left; bo=
+rder-top-style:solid; padding-bottom:4px; padding-right:10px; padding-left:=
+0; padding-top:4px; border-top-width:0" valign=3D"top">
+<h4 style=3D"margin-left: 10px !important;"><b>More time to buy</b></h4>
+<p style=3D"padding-bottom:0; margin-left:10px; margin-top:0; font-size:16p=
+x">With Extended Access, Plus members enjoy 72 extra hours to decide if too=
+ls are right for them. Members also gain access to Last Call=E2=80=94a spec=
+ial Plus party that provides a second chance to buy or upgrade some of our =
+most popular tools.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTableBlo=
+ck kmTableMobile" width=3D"100%">
+<tbody class=3D"kmTableBlockOuter">
+<tr>
+<td class=3D"kmTableBlockInner" style=3D"padding-top:10px;padding-bottom:45=
+px;padding-left:50px;padding-right:50px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTable" style=3D"" width=3D"100%">
+<thead>
+<tr>
+<th class=3D"kmTextContent" style=3D"text-align:left;width:25%;padding-top:=
+4px;font-weight:bold;padding-right:0px;padding-left:0px;padding-bottom:4px;=
+" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:left;padding-top:4px;font-w=
+eight:bold;padding-right:0px;padding-left:0px;padding-bottom:4px;" valign=
+=3D"top">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"kmTableRow">
+<td class=3D"kmTextContent" style=3D"text-align:left;width:25%;border-top-s=
+tyle:solid;padding-bottom:4px;padding-right:10px;padding-left:0px;padding-t=
+op:4px;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;" valign=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1=
+xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zSBhznpA6Az=
+RZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w=
+6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDc=
+btRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h7/7EF2T1_hICKGLDP6Dr=
+NPJYFbIYF-Pw1DdrKnzO7asPY">
+<img align=3D"left" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvuct=
+c.cloudfront.net/company/Ktp4ZG/images/f6cfaf8a-2912-4c1a-987f-6c00f9f2e53c=
+.png" style=3D"max-width:86px;" width=3D"86">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"border-right:none; text-align:left; bo=
+rder-top-style:solid; padding-bottom:4px; padding-right:10px; padding-left:=
+0; padding-top:4px; border-top-width:0" valign=3D"top">
+<h4 style=3D"margin-left: 10px !important;"><b>Enjoy exclusive deals</b></h=
+4>
+<p style=3D"padding-bottom:0; margin-left:10px; margin-top:0; font-size:16p=
+x">Throughout the year, we negotiate exclusive offers that are only availab=
+le to Plus members. To see what deals Plus members have access to, visit ou=
+r <a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" href=
+=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laedDoyXxGGAiXxxlmTtRQaS=
+bA9ire7eKn6KykTfBXPxGmG0mghsbjammugFJLpS-fexoUa8I4CP-nxE6KkyBskX3PaLgucMN0L=
+vrbUk7hdTFgMK9_MTsyrRlrMl3Ha4vCiuP58hWKmM4bnlOLDus3nNPUmP1pXjkOF19Xg5vLSoWR=
+bna675Ck9k2BxBIdsFotS-Yl85SNfQojuXYWYCTrSKCAvlte0q1vErwZhrgvm9eYGXn2xMMraXJ=
+TQcOIgydX5IzzbY52QRmfh5hCCi83mQg/3l1/mYn0B49bTE2bLn4_oI3SeA/h8/LliRs0_b2Od4=
+NyaaGm3tbgRdD1_43FcvqCt8wG1eIXQ"><strong>Plus exclusives collection</strong=
+></a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"background-color:#FF5732;" valign=
+=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-top:35px;padding-bottom:0px;pa=
+dding-left:50px;padding-right:50px;" valign=3D"top">
+<h3 style=3D"text-align: center;"><span style=3D"color:#FFFFFF;">This just =
+in</span></h3>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" style=3D"min-width:100%" width=3D"100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"padding:9px;padding-left:9;padding=
+-right:9;background-color:#FF5732;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" style=3D"min-width:100%" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/Ktp4ZG/images/4e925b6a-c82d-4b8a-a504-4bfd101ea1=
+b3.png" style=3D"max-width:126px;padding:0;border-width:0;" width=3D"126">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"background-color:#FF5732;" valign=
+=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-top:20px;padding-bottom:0px;pa=
+dding-left:50px;padding-right:50px;" valign=3D"top">
+<h4 style=3D"text-align: center;"><span style=3D"color:#FFFFFF;">Plus membe=
+rs can now access the Originals Business Growth Pack for FREE.</span></h4>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" style=3D"min-width:100%" width=3D"100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"padding:9px;padding-left:9;padding=
+-right:9;background-color:#FF5732;padding-top:20px;padding-bottom:35px;" va=
+lign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" style=3D"min-width:100%" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<a target=3D"_self" href=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7=
+laeSkDLu1xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zS=
+BhznpA6AzRZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY=
+7cQOGro3w6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI=
+6a6cSuxDcbtRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h9/yaIZKUOqI=
+yASuMlhTIjOxZTSGhnkDdbAAKnETGkwqD0">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/Ktp4ZG/images/dc127396-aaf4-4c4e-b5b5-dd0d188aa0=
+76.gif" style=3D"max-width:490px;padding:0;border-width:0;" width=3D"490">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"background-color:#FF5732;" valign=
+=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-top:0px;padding-bottom:10px;pa=
+dding-left:50px;padding-right:50px;" valign=3D"top">
+<p style=3D"padding-bottom:0"><span style=3D"color:#1B1B1B;">Get the founda=
+tional tools to start and scale a seven-figure business with our AppSumo Or=
+iginals products. You'll have full access to KingSumo, plus Tier 1 access t=
+o SendFox, EmailBadge, ShortySMS, and SleekBio for as long as you're a memb=
+er.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmButtonBl=
+ock" style=3D"width: 100% !important" width=3D"100%">
+<tbody class=3D"kmButtonBlockOuter">
+<tr>
+<td align=3D"center" class=3D"kmButtonBlockInner kmMobileStretch" style=3D"=
+padding-top:22px;padding-bottom:15px;padding-left:50px;padding-right:50px;b=
+ackground-color:#FF5732;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmButtonCo=
+ntentContainer" style=3D"background-color:#FFBC00;border-radius:50px;" widt=
+h=3D"">
+<tbody>
+<tr>
+<!--[if !mso]><!-->
+<td align=3D"center" class=3D"kmButtonContent" style=3D"font-size:18px;colo=
+r:#1B1B1B;letter-spacing:0px;font-weight:bold;font-family:&quot;Helvetica N=
+eue&quot;, Arial;" valign=3D"middle">
+<a class=3D"kmButton" style=3D"text-decoration:none; display: inline-block;=
+ padding-top:20px;padding-bottom:20px;font-size:18px;color:#1B1B1B;letter-s=
+pacing:0px;font-weight:bold;padding-left:40px;padding-right:40px;font-famil=
+y:&quot;Helvetica Neue&quot;, Arial; ;" target=3D"_self" title=3D"" href=3D=
+"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1xwpytR4yaWcMbrzzgu=
+ShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zSBhznpA6AzRZ50uFX1B1SWB7fu4b=
+uZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w6Uzt4xwdr9-_mwoV5A=
+nktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDcbtRe_B3n_RQdA0fei2=
+2TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h10/AkvtKHAkpRUODY2vr2GFmD-7gnrhlXijbG3=
+ej21j84I">Join now</a>
+</td>
+<!--<![endif]-->
+<!--[if mso]>
+<td align=3D"center" valign=3D"middle" class=3D"kmButtonContent"
+  style=3D"padding:15px; padding-top:20px;padding-bottom:20px;font-size:18p=
+x;color:#1B1B1B;letter-spacing:0px;font-weight:bold;padding-left:40px;paddi=
+ng-right:40px;font-family:&quot;Helvetica Neue&quot;, Arial;">
+  <a class=3D"kmButton" title=3D"" target=3D"_self" style=3D"text-decoratio=
+n:none;padding-top:20px;padding-bottom:20px;font-size:18px;color:#1B1B1B;le=
+tter-spacing:0px;font-weight:bold;padding-left:40px;padding-right:40px;font=
+-family:&quot;Helvetica Neue&quot;, Arial;; margin-top:-20px;margin-bottom:=
+-20px;margin-left:-40px;margin-right:-40px;" href=3D"http://trk.klclick3.co=
+m/ss/c/JR1XY4km5DfD7Pmnm7laeSkDLu1xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJye=
+JV36ET3_tp0EKrIdus0qSL3zSBhznpA6AzRZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4x=
+f4Xr-CSbi8JbPcspCsiIMmgKY7cQOGro3w6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3=
+DUflQHNDu-8FoXlwY72GEr2LI6a6cSuxDcbtRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE=
+2bLn4_oI3SeA/h11/Q3ZKcHXkkSpl941FuLKb2JhwitGilTQKsffY4gvzk3I">Join now</a>
+</td>
+<![endif]-->
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"background-color:#FF5732;" valign=
+=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-top:0px;padding-bottom:35px;pa=
+dding-left:18px;padding-right:18px;" valign=3D"top">
+<p style=3D"padding-bottom:0; text-align:center"><span style=3D"color:#1B1B=
+1B;"><span style=3D"font-size:12px;">Just $99/year - Cancel anytime</span><=
+/span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"padding-top:35px;padding-bottom:0px;pa=
+dding-left:50px;padding-right:50px;" valign=3D"top">
+<h3 style=3D"text-align: center;">What members have to say</h3>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" style=3D"min-width:100%" width=3D"100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"padding:9px;padding-left:9;padding=
+-right:9;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" style=3D"min-width:100%" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/Ktp4ZG/images/e58ebd97-1346-462f-97bc-d651b1e5c6=
+af.png" style=3D"max-width:120px;padding:0;border-width:0;" width=3D"120">
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmImageBlo=
+ck" style=3D"min-width:100%" width=3D"100%">
+<tbody class=3D"kmImageBlockOuter">
+<tr>
+<td class=3D"kmImageBlockInner" style=3D"padding:9px;padding-left:9;padding=
+-right:9;padding-top:25px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmImageContentContainer" style=3D"min-width:100%" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<a target=3D"_self" href=3D"http://trk.klclick3.com/ss/c/JR1XY4km5DfD7Pmnm7=
+laeSkDLu1xwpytR4yaWcMbrzzguShGLjQa2ErMV_z499Y5vJyeJV36ET3_tp0EKrIdus0qSL3zS=
+BhznpA6AzRZ50uFX1B1SWB7fu4buZ5rauOJ1LObrRkeTMqiw4xf4Xr-CSbi8JbPcspCsiIMmgKY=
+7cQOGro3w6Uzt4xwdr9-_mwoV5AnktLgbn9JT1Xn3FGfeL5FT3DUflQHNDu-8FoXlwY72GEr2LI=
+6a6cSuxDcbtRe_B3n_RQdA0fei22TINV_hw/3l1/mYn0B49bTE2bLn4_oI3SeA/h12/80AsQQAv=
+lK9O2wPao2BpL_OBTl8JsQOIm4zawriAkKg">
+<img align=3D"center" alt=3D"" class=3D"kmImage" src=3D"https://d3k81ch9hvu=
+ctc.cloudfront.net/company/Ktp4ZG/images/ad76220a-a08b-481f-9d92-ff4aad664a=
+a5.png" style=3D"max-width:520px;padding:0;border-width:0;" width=3D"520">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmDividerB=
+lock" width=3D"100%">
+<tbody class=3D"kmDividerBlockOuter">
+<tr>
+<td class=3D"kmDividerBlockInner" style=3D"padding-top:45px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmDividerC=
+ontent" width=3D"100%">
+<tbody>
+<tr><td><span></span></td></tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTableBlo=
+ck kmTableMobile" width=3D"100%">
+<tbody class=3D"kmTableBlockOuter">
+<tr>
+<td class=3D"kmTableBlockInner" style=3D"padding-top:0px;padding-bottom:0px=
+;padding-left:100px;padding-right:100px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTable" style=3D"background-color:#FFFFFF;text-align:center;" width=
+=3D"100%">
+<thead>
+<tr>
+<th class=3D"kmTextContent" style=3D"text-align:center;padding-right:0px;pa=
+dding-bottom:0px;text-align:center;font-weight:bold;padding-left:0px;paddin=
+g-top:0px;" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:center;padding-right:0px;pa=
+dding-bottom:0px;text-align:center;font-weight:bold;padding-left:0px;paddin=
+g-top:0px;" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:center;padding-right:0px;pa=
+dding-bottom:0px;text-align:center;font-weight:bold;padding-left:0px;paddin=
+g-top:0px;" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:center;padding-right:0px;pa=
+dding-bottom:0px;text-align:center;font-weight:bold;padding-left:0px;paddin=
+g-top:0px;" valign=3D"top">
+</th>
+<th class=3D"kmTextContent" style=3D"text-align:center;padding-right:0px;pa=
+dding-bottom:0px;text-align:center;font-weight:bold;padding-left:0px;paddin=
+g-top:0px;" valign=3D"top">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class=3D"kmTableRow">
+<td class=3D"kmTextContent" style=3D"text-align:center;border-top-style:non=
+e;padding-bottom:30px;padding-right:0px;padding-left:0px;padding-top:30px;b=
+order-top-color:#d9d9d9;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding:0;text-align: center;" valign=
+=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/p_HGADq_eqzIGE-LNYpS21OdvUK=
+J6DFk0Evnw-Ww4BFFOR_aYM68-WEmK2GSzBKIRF3-h4pSmrgFJ47jVFjXfQHp_36xwyYzmjMWol=
+CD6J1lu7DzLaAaE3IrnDA3MzprDSMo-FQax5bYSENGggITV22V0NMzKBCAOXQdinhDI0zv2oZNp=
+QfjbXFPG9ISAooxLCBk7mxZPAY7e-GTiR4LSGLTrK9DIHMmplYURpDAKGyC2Cx9xWipRvF1kjo8=
+tbnNIp5RiDoQ4fclTIUEcsyNBzW5I_jF7wBEZenvmxIZkGA/3l1/mYn0B49bTE2bLn4_oI3SeA/=
+h13/mEMzLimwONAOYmMZDwbT4FbCw-kQURDIXgNJ1tXNEVU">
+<img align=3D"center" alt=3D"YouTube" class=3D"kmImage" src=3D"https://d3k8=
+1ch9hvuctc.cloudfront.net/company/Ktp4ZG/images/54009511-6858-4c9d-8c5a-4ab=
+adc1e43c3.png" style=3D"max-width:40px;" width=3D" 40 ">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"text-align:center;border-top-style:non=
+e;padding-bottom:30px;padding-right:0px;padding-left:0px;padding-top:30px;b=
+order-top-color:#d9d9d9;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding:0;text-align: center;" valign=
+=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/6dnR4dVNho07RPeVloJ2gt26eYt=
+ESIbJ5RzXPVeZjFGutTob7csG5x7yWWzxtU-4kPh-n3URkvRsoITn6rl75QEtkSAKVBccxTkl63=
+Pqt2A41pOR8YrFZem2h_2Nu6k1P56J6ln9lOQ02LCtwqOSiEw5YCU0xds-fDsWchPIN72G-G-ND=
+-QIizw0FwDJD7FyvRKT0qIi7iQwC8bDpPJKGQQnLm2_IxcK95j6vjBG8O8wtsSCysJR3gtA-uWf=
+7f0HhRCa2iUD2iDHa09MV6awlQ/3l1/mYn0B49bTE2bLn4_oI3SeA/h14/6fxeZt3I2wvZJ5jc6=
+iKqlStFgkyuRrpyJrQTI1q1Cs8">
+<img align=3D"center" alt=3D"Instagram" class=3D"kmImage" src=3D"https://d3=
+k81ch9hvuctc.cloudfront.net/company/Ktp4ZG/images/513d15e3-b312-429c-94cb-c=
+0a6bb79bccd.png" style=3D"max-width:40px;" width=3D" 40 ">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"text-align:center;border-top-style:non=
+e;padding-bottom:30px;padding-right:0px;padding-left:0px;padding-top:30px;b=
+order-top-color:#d9d9d9;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/p_HGADq_eqzIGE-LNYpS2xbiOHa=
+V05YVYovfoueBZlpCu_o4hL2JJk6d81NGoNEXBWZzVIIh4jypTI-rCjdDz5h49_C3mSnXbUci5x=
+NF7X-ZQMqDYnHHWlxA8LxHAQuWONzn66MMJuWfODeiEY5u_zJYG-5TUWomuA_kp8qEGEkNWWIKT=
+TSzMJl6hlYta-fa7EuRvAI5Y6Gi9EW72cZcCnaegBdKRPGSDWD9fORoxfNCm7cA--wTuJZof5sQ=
+sJD6DEOOCjttIRydQrBaxUtgsIQoLGIsJzuvXoVhHUDWIyo/3l1/mYn0B49bTE2bLn4_oI3SeA/=
+h15/rBMQ6ihz3-IA0ApDGvZnBRJ31ElJBJF4t770dXKtD1Q">
+<img align=3D"center" alt=3D"Linkedin" class=3D"kmImage" src=3D"https://d3k=
+81ch9hvuctc.cloudfront.net/company/Ktp4ZG/images/e22f1495-59a0-4cdc-876c-39=
+587a05a71e.png" style=3D"max-width:40px;" width=3D"40">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"text-align:center;border-top-style:non=
+e;padding-bottom:30px;padding-right:0px;padding-left:0px;padding-top:30px;b=
+order-top-color:#d9d9d9;border-top-width:0px;" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/6dnR4dVNho07RPeVloJ2gkcmlzq=
+TwZamU2QfCDPbjYda7ELlFdLu8QiJ0BHBdIUbVLpJqUTv3b8o39ClEeHQTqayyALlkhzqm2U2FN=
+Pu1jCJYdALhGU-wSa2CW3b3hEp8a-lRzeNkH2truCgo197xEgNkolyorxGbSk7e1Lg9lRMzOOgf=
+SQemhA-APM2x_1QXaKskuQgMPnhmPAhE2ww7J7_Wa0haJHDlOEKWXWDzH_S_Cir0ZdMyrYbh8TA=
+NAfBhVkiVZZmgqUEv1cMoKFzQw/3l1/mYn0B49bTE2bLn4_oI3SeA/h16/HYPOJk-zGiW3pa9Z7=
+8LqNphq_RYkfzbBqclsJBa-w6o">
+<img align=3D"center" alt=3D"Facebook" class=3D"kmImage" src=3D"https://d3k=
+81ch9hvuctc.cloudfront.net/company/Ktp4ZG/images/4e0e1448-32f6-4aea-a81b-b0=
+c4f5b6b052.png" style=3D"max-width:40px;" width=3D"40">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td class=3D"kmTextContent" style=3D"border-right:none; text-align:center; =
+border-top-style:none; padding-bottom:30px; padding-right:0; padding-left:0=
+; padding-top:30px; border-top-color:#d9d9d9; border-top-width:0" valign=3D=
+"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" widt=
+h=3D"100%">
+<tbody><tr>
+<td class=3D"kmImageContent" style=3D"padding-top:0px;padding-bottom:0;padd=
+ing-left:9px;padding-right:9px;text-align: center;" valign=3D"top">
+<a style=3D"color:#0044C0; font-weight:bold; text-decoration:none" target=
+=3D"_self" href=3D"http://trk.klclick3.com/ss/c/6dnR4dVNho07RPeVloJ2gjn3aBI=
+B1-RwUR_53HqccIopEzu5fpZ2xKPu1aKO9jU2KKwnr87Xk7WdsX-ZnzwwaFa2Qlp8YnCExXgu4r=
+mDZ0st3uUxsksGh-wyjt5BB0A-osA7ZhfS0W_r1LMgmz1ZJ_rFpvJkFNxApbQI6vmr7orYaaRkf=
+U5R3wuuZNhqktcsNNME6JVJftFk-LKEUwU2h_pxQrppDYWv18SdI2fCR-Re8lG3e6mMMeMhTIg4=
+tlkOr_YBLv65p-ng_tr9ztAbfw/3l1/mYn0B49bTE2bLn4_oI3SeA/h17/a2mYQxRwyjO4ERKuz=
+_VTn1MItB_QDuEhCN8IY0OZg0s">
+<img align=3D"center" alt=3D"Twitter" class=3D"kmImage" src=3D"https://d3k8=
+1ch9hvuctc.cloudfront.net/company/Ktp4ZG/images/b0885f30-b5a8-4ab9-aadc-6ab=
+67a8b9cb9.png" style=3D"max-width:40px;" width=3D"40">
+</a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"templateRo=
+w" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"rowContainer kmFloatLeft" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"kmTextBloc=
+k" width=3D"100%">
+<tbody class=3D"kmTextBlockOuter">
+<tr>
+<td class=3D"kmTextBlockInner" style=3D"" valign=3D"top">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"kmTextContentContainer" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"kmTextContent" style=3D"font-size:12px;color:#1B1B1B;padding-b=
+ottom:25px;text-align:center;padding-right:18px;padding-left:18px;padding-t=
+op:25px;" valign=3D"top">
+<p style=3D"font-size: 10px; letter-spacing: .1px;"><a class=3D"web-view" h=
+ref=3D"http://trk.klclick3.com/ss/c/c3Pnix-08N4aHCQOnhfARiz1t_I1ds1im1HyWlA=
+OLQ2nEzJNE9vmYvRfD6TiyE_YdwHX1RfPw_epqG1xlE28ZnEg2IHL4ZMMMMwuRIxppK-H_kdIhP=
+EilIYqFmKceXJCLiNVW-xl2HN897wyCY4EHm3THrzxopqlkmVfvNc1h1MqZHkzvDSJCBm1b5O1S=
+azIVGx-7ZXajP1mo7e-WvfSuEIzDwe2UWIq1AsU8QtuKbE/3l1/mYn0B49bTE2bLn4_oI3SeA/h=
+18/TUlYQa2a_HnSgj4IZcMg_hqJ7cCnK1htIS8fYumLots">View in Your Browser</a></p=
+>
+<p style=3D"padding-bottom:0; font-size:10px; letter-spacing:0.1px">Want to=
+ re-evaluate this relationship? <a class=3D"manage-preferences" href=3D"htt=
+p://trk.klclick3.com/ss/c/shOSaWMZlD-J0OnMwG8U-DS6ra4Q7lGXk6XzGba3qZ7mF_ZiG=
+5cTRNm4Fz6TJ3SctT8Y91aaFKzMjMBvqJJ0Ll4QvnQUtHJbveaHUXGpG01ZYwjZbgJ7xk_zty7z=
+AIBEbigPbbfFRb4_BPIALl8L-R03kJCdQZsNmPcIz_F-8eZktav-omCVmyW3AZaCswnDUnfBTM1=
+pAxn1bvmFqOUuHQ/3l1/mYn0B49bTE2bLn4_oI3SeA/h19/DauwSZnNW4-JRdjseLdHvzLt95uQ=
+ifsa6jf-y2wl48E">Manage Preferences</a> or <a class=3D"unsubscribe-link" hr=
+ef=3D"http://trk.klclick3.com/ss/c/shOSaWMZlD-J0OnMwG8U-DS6ra4Q7lGXk6XzGba3=
+qZ4Ghsv1KShZj2PoefqD2fHuYbx5UKQf8mW5KAde9vneotNhwnBFFFjpNCGZsHeCRNps55Xs9xB=
+p3tb3m_v4eVyr0d2iDEcQj0Vt_UT7K6e3CrBjsnVOZfprzel2UcR7kkv7S-ONAjmoQel1FS29fX=
+unPnTM3CnlZ5qX6JAJ_4GGJNVz32BKhVGTKePmnrqjryo/3l1/mYn0B49bTE2bLn4_oI3SeA/h2=
+0/XJylIVx6uS5BXvtLjuTJQbW3Bj_VupZI-T-j4YfQcpc">Unsubscribe</a>.<br>
+AppSumo 1305 E 6th St #3 Austin, Texas 78702</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody></table>
+<!--[if !mso]><!-->
+</div>
+</div>
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">=E2=80=8C</div>
+<!--<![endif]-->
+<!--[if mso]>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            <![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+
+</body></html>
+--===============5434828950391679713==--

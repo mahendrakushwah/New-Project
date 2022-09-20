@@ -8,40 +8,31 @@ const USERS = require('../models/USERS')
 db.sequelize.sync();
 
 const users = db.USERS;
-// connection.sequelize.sync();
-// db.sequelize.authenticate().then(function () {
-//     console.log('Nice! Database looks fine');
-// }).catch(function (err) {
-//     console.log(err, "Something went wrong with the Database Update!")
-// });
-
 module.exports = {
     loginPage: function (req, res) {
-        res.render('login')
+        res.render('login',{
+            message: ''
+        })
     },
     login: async function (req, res) {
         var loginId = req.body.email
         var password = req.body.password
-        
-
-        // USERS.findAll({where EMAIL =loginId})
-        // .then( data => {
-
-        // })
         const result = await users.findOne({ where: { EMAIL: loginId } });
         if (result === null) {
-            res.send('User Not found!');
-            console.log('Not found!');
+            res.render('login',{
+                message: 'User Not Found!'
+            })
+            console.log('Not found!'); 
         } else  {
             if(result.PASSWORD == password){
                 console.log(result);
                 res.send("Successfully logged In")
             }else{
-                res.send('Wrong Password')
+                res.render('login',{
+                    message: 'Wrong Password!'
+                })
             }
         }
-
-
         // connection.query('SELECT * FROM USERS WHERE EMAIL = ?', [loginId], function (error, results, fields) {
         //     if (error) {
         //         res.send("Something Went Rong..")
@@ -63,7 +54,9 @@ module.exports = {
     },
 
     registerPage: function (req, res) {
-        res.render('register')
+        res.render('register',{
+            message:''
+        })
     },
     register: async function (req, res) {
 
@@ -75,7 +68,9 @@ module.exports = {
         }
         users.create(data)
             .then(data => {
-                return res.send("Created");
+                return res.render('register',{
+                    message:'Your Profile Created Successfully, Now you can login!'
+                });
             })
             .catch(err => {
                 return res.status(500).send({
@@ -83,18 +78,13 @@ module.exports = {
                 });
             });
 
-        }
-        
+        },
+    forgotpage: async function(req,res){
+
+    },
+    dashboardPage: function(req, res){
+        res.render('dashboard',{
+            message:''
+        })
     }
-    
-    
-    
-            // connection.query('insert into USERS(FIRST_NAME, LAST_NAME, EMAIL, PASSWORD) values(?,?,?,?)', [firstName, lastName, loginId, password], function (error, results, fields) {
-            //     if (error) {
-            //         console.log(error);
-            //     }
-            //     else {
-            //         res.send("Created Successfully")
-    
-            //     }
-            // });
+}
