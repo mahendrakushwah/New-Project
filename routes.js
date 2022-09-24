@@ -1,14 +1,6 @@
 const express = require('express'); 
 const app = express.Router();
 const loginController=require('./controllers/loginController')
-const body_Parser = require('body-parser')
-
-// const flash = require('connect-flash');
-// const session = require('express-session');
-// app.use(flash());
-// app.get('/display-message', (req, res) => {
-//     res.send(req.flash('message'));
-// });
 
 
 app.use(express.json());
@@ -21,8 +13,11 @@ app.post('/login', loginController.login)
 
 app.get('/register', loginController.registerPage)
 app.post('/register',loginController.register)
-app.post('/forgotpassword',loginController.forgotpage)
-// app.get('/dashboard',loginController.dashboardPage)
+app.get('/forgot-password', loginController.forgotPassword);
+app.post('/passwordresetmail', loginController.passwordreset)
+app.get('/forgotpasswordemail', loginController.forgotPasswordEmail)
+app.get('/verify-email/:token', loginController.newPassword);
+
 
 module.exports = app;
   

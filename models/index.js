@@ -19,6 +19,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   db.Sequelize = Sequelize,
   db.sequelize = sequelize,
   db.USERS = require("./USERS.js")(sequelize, Sequelize);
+  db.emailverify = require("./emailverify.js")(sequelize,Sequelize)
   
   
   module.exports = db;

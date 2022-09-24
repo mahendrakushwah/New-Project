@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> xDeliver - Login </title>
+    <%- include('partials/loginheader') %>
+
+   
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image bg-dark text-white p-5">
+                                <h2>X-DELIVER</h2>
+                                <h1> THE ULTIMATE APP </h1>
+                                <p>With X-Deliver You Can Ensure The Deliverability Of The Emails To The Inbox</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                    </div>
+                                     <div class="">
+                                    <% if (message != '') { %>
+                                    <div class="alert alert-primary" role="alert">
+                                    <%= message %> 
+                                    </div>
+                                    <% } %>
+                                </div>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="/register">Create an Account</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a class="small" href="/">Login</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer text-white">
+                    <a href="">CONTACT</a>
+                    <a href="">ABOUT US</a>
+                    <a href="">SERVICES</a>
+                    <a href="">FAQ</a>
+                </div>
+
+        </div>
+
+    </div>
+
+     <%- include('partials/footer') %>
